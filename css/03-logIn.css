@@ -11,7 +11,7 @@
     border-radius: 8px;
     border: 1px solid var(--hospital-green);
     color: var(--hospital-green);
-    width: 80%;
+    width: 100%;
     cursor: pointer;
     font-size: var(--md);
     font-weight: bold;
