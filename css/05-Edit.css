@@ -1,0 +1,8 @@
+.edit-button {
+    width: 100%;
+}
+
+.value {
+    color: var(--very-light-pink);
+    margin: 0 0 24px 0;
+}
