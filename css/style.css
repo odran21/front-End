@@ -5,7 +5,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 :root {
   --white: #ffffff;
   --black: #000000;
@@ -20,6 +19,7 @@ body {
   margin: 0;
   font-family: "Quicksand", sans-serif;
 }
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -168,15 +168,19 @@ nav {
   color: var(--hospital-green);
 }
 
-/* - ASIDE (PRODUCT DETAIL) - */
-.product-detail {
+/* - ASIDE */
+aside {
   width: 360px;
-  padding: 0 24px;
+  padding: 0 24px 24px 24px;
   box-sizing: border-box;
   position: absolute;
   right: 0;
   background-color: var(--white);
+  border: 1px solid var(--hospital-green);
+  border-radius: 0 0 32px 32px;
 }
+
+/* - shopping Cart Container */
 .title-container {
   padding: 8px;
   display: flex;
@@ -246,7 +250,7 @@ nav {
   height: 50px;
 }
 
-/* - Product List - */
+/* - Products List - */
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 240px);
@@ -288,6 +292,78 @@ nav {
   color: var(--very-light-pink);
 }
 
+/* - Product Detail - */
+.product-detail-close {
+  background: var(--white);
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 8px;
+  left: 32px;
+  z-index: 2;
+  padding: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-detail-close:hover {
+  cursor: pointer;
+}
+#productDetail > img:nth-child(2) {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 0 0 20px 20px;
+}
+.product-info2 {
+  margin: 24px 24px 0 24px;
+  display: flex;
+  flex-direction: column;
+}
+.product-info2 p:nth-child(1) {
+  font-weight: bold;
+  font-size: var(--md);
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+.product-info2 p:nth-child(2) {
+  color: var(--very-light-pink);
+  font-size: var(--md);
+  margin-top: 0;
+  margin-bottom: 36px;
+}
+.product-info2 p:nth-child(3) {
+  color: var(--very-light-pink);
+  font-size: var(--sm);
+  margin-top: 0;
+  margin-bottom: 36px;
+}
+.add-to-cart-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.points {
+    display: flex;
+    justify-content: center;
+}
+.points > li {
+    background: var(--very-light-pink);
+    width: 8px;
+    height: 8px;
+    margin: 8px 6px;
+    border-radius: 50%;
+    list-style-type: none;
+    cursor: pointer;
+  }
+.points > .active {
+    background: var(--hospital-green);
+}
+.points > li:hover {
+    background: var(--hospital-green);
+}
+
 @media (max-width: 640px) {
   /* - NavBar y Menus - */
   .navbar-left ul {
@@ -303,7 +379,7 @@ nav {
     display: block;
   }
 /* - ASIDE (PRODUCT DETAIL) - */
-  .product-detail {
+  #productDetail {
     width: 100%;
   }
 /* - Product List - */
