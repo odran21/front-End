@@ -160,7 +160,7 @@ function renderProducts(arr) {
         </figure>*/
         const productInfoFigure = document.createElement('figure');
         const productImgKart = document.createElement('img');
-        productImgKart.setAttribute('src', '../icons/bt_add_to_cart.svg');
+        productImgKart.setAttribute('src', './icons/bt_add_to_cart.svg');
         productInfoFigure.appendChild(productImgKart);
         // Insertamos el div (con los <p> de: el precio y el nombre) y el icono de add to kart al div padre con la clase="product-info"  
         productInfo.appendChild(productInfoDiv);
